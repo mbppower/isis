@@ -17,22 +17,26 @@
   specific language governing permissions and limitations
   under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.apache.isis.core</groupId>
-        <artifactId>isis</artifactId>
+	<parent>
+		<groupId>org.apache.isis.core</groupId>
+		<artifactId>isis</artifactId>
         <version>1.9.0-SNAPSHOT</version>
-    </parent>
+	</parent>
 
-    <artifactId>isis-core-integtestsupport</artifactId>
-    <name>Isis Core Integration Testing Support</name>
+	<artifactId>isis-core-fakedata</artifactId>
+	<name>Isis Core FakeData</name>
 
-    <properties>
+	<description>
+		Fake data service for writing unit tests and integration tests; 
+        should be added as a dependency with scope=test only
+	</description>
+
+	<properties>
         <siteBaseDir>..</siteBaseDir>
-        <relativeUrl>integtestsupport/</relativeUrl>
+		<relativeUrl>fakedata/</relativeUrl>
     </properties>
 
     <!-- used in Site generation for relative references. -->
@@ -45,7 +49,7 @@
                 <artifactId>maven-project-info-reports-plugin</artifactId>
                 <inherited>false</inherited>
                 <configuration>
-                    <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+                	<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
                 </configuration>
                 <reportSets>
                     <reportSet>
@@ -65,47 +69,12 @@
     <dependencies>
         <dependency>
             <groupId>org.apache.isis.core</groupId>
-            <artifactId>isis-core-unittestsupport</artifactId>
+            <artifactId>isis-core-applib</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.isis.core</groupId>
-            <artifactId>isis-core-specsupport</artifactId>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jmock</groupId>
-            <artifactId>jmock</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jmock</groupId>
-            <artifactId>jmock-junit4</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.isis.core</groupId>
-            <artifactId>isis-core-security</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.isis.core</groupId>
-            <artifactId>isis-core-runtime</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.isis.core</groupId>
-            <artifactId>isis-core-wrapper</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
-
     </dependencies>
+
 </project>

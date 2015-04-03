@@ -67,6 +67,7 @@ public class ServicesInstallerFromAnnotation extends InstallerAbstract implement
      */
     public final static String PACKAGE_PREFIX_STANDARD = Joiner.on(",").join(
                                         "org.apache.isis.applib",
+                                        "org.apache.isis.core.fakedata" ,
                                         "org.apache.isis.core.wrapper" ,
                                         "org.apache.isis.core.metamodel.services" ,
                                         "org.apache.isis.core.runtime.services" ,

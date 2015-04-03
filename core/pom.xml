@@ -153,6 +153,7 @@
         <jmock.version>2.6.0</jmock.version>
         <easymock.version>2.5.2</easymock.version>
         <cucumber.version>1.1.5</cucumber.version>
+        <javafaker.version>0.5</javafaker.version>
 
         <geronimo-jsp_2.1_spec.version>1.0.1</geronimo-jsp_2.1_spec.version>
         <geronimo-jta_1.1_spec.version>1.1.1</geronimo-jta_1.1_spec.version>
@@ -1144,6 +1145,20 @@ ${license.additional-notes}
                 <version>1.9.0-SNAPSHOT</version>
             </dependency>
 
+            <!-- fakedata -->
+            <dependency>
+                <groupId>org.apache.isis.core</groupId>
+                <artifactId>isis-core-fakedata</artifactId>
+                <version>1.9.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.isis.core</groupId>
+                <artifactId>isis-core-fakedata</artifactId>
+                <version>1.9.0-SNAPSHOT</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+
             <!-- integtestsupport -->
             <dependency>
                 <groupId>org.apache.isis.core</groupId>
@@ -1771,6 +1786,12 @@ ${license.additional-notes}
                 </exclusions>
             </dependency>
 
+            <dependency>
+                <groupId>com.github.javafaker</groupId>
+                <artifactId>javafaker</artifactId>
+                <version>${javafaker.version}</version>
+            </dependency>
+
             <!-- BDD testing -->
             <dependency>
                 <groupId>info.cukes</groupId>
@@ -2203,6 +2224,7 @@ ${license.additional-notes}
         <module>metamodel</module>
         <module>runtime</module>
         <module>wrapper</module>
+        <module>fakedata</module>
         <module>webserver</module>
 
         <module>security-noop</module>
